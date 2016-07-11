@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.chinaweather.WeatherView"
+    android:background="@drawable/bg3"
+    >
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/lay_3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#a1a1a1"-->
+        <!-->-->
+        <!--<TextView-->
+            <!--android:id="@+id/city"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="北京"-->
+            <!--android:textSize="16pt"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+
+
+
+    <RelativeLayout
+    android:id="@+id/lay_1"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentEnd="true">
+        <RelativeLayout
+            android:id="@+id/lay_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="2dp"
+                android:layout_height="110dp"
+                android:background="#003399"
+                android:layout_marginStart="97dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tempture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4°"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/line_1"
+                android:textSize="26pt"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="晴"
+                android:textSize="10pt"
+                android:layout_alignBottom="@+id/line_1"
+                android:layout_alignEnd="@+id/tempture"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="湿度"
+                android:id="@+id/wet"
+                android:textSize="10pt"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/line_1"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"
+                android:id="@+id/wet_pecent"
+                android:layout_alignBottom="@+id/wet"
+                android:textSize="10pt"
+                android:layout_toEndOf="@+id/wet"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风力"
+                android:textSize="10pt"
+                android:id="@+id/wind_pecent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/wet_pecent"
+                android:layout_marginStart="20dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3级"
+                android:id="@+id/wind"
+                android:textSize="10pt"
+                android:layout_alignBottom="@+id/wind_pecent"
+                android:layout_toEndOf="@+id/wind_pecent"
+                android:layout_marginStart="10dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM2.5"
+                android:id="@+id/pm2.5"
+                android:textSize="10pt"
+                android:layout_below="@+id/wet"
+                android:layout_marginTop="2dp"
+                android:layout_alignStart="@+id/wet"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空气指数：40"
+                android:id="@+id/kongqizhishu"
+                android:textSize="10pt"
+                android:layout_alignTop="@+id/pm2.5"
+                android:layout_alignStart="@+id/wind_pecent"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中央气象台22：45发布"
+                android:id="@+id/pushtime"
+                android:textSize="8pt"
+                android:textColor="#ffffff"
+                android:layout_alignBottom="@+id/line_1"
+                android:layout_alignStart="@+id/pm2.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7/16"
+                android:id="@+id/textView7"
+                android:layout_above="@+id/pushtime"
+                android:textSize="8pt"
+                android:layout_alignStart="@+id/pm2.5"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="甲午年九月初八"
+                android:id="@+id/textView8"
+                android:layout_marginStart="10dp"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                android:layout_alignTop="@+id/textView7"
+                android:layout_toEndOf="@+id/textView7" />
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>
